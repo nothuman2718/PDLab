@@ -1,3 +1,4 @@
+
 const fs = require('fs');
 const path = require('path');
 const execSync = require('child_process').execSync;
@@ -69,6 +70,12 @@ function main() {
 
     //it will work for only q0-q9.(Max 10 questions)
     let cFile = cFiles.find(f => f.endsWith(".c") && f[f.length - 3] === qn[qn.length - 1]);
+	if(cFile==undefined){
+		console.log("Invalid question number i.e .. q4");
+	fs.appendFileSync(ScriptReport,"Invalid question number");
+		process.exit(1);
+	}
+
     let result = validateNames(cFilesFolder, cFile);
     if (result) {
         console.log("\x1b[33m\x1b[1mValid folder and file names\x1b[0m\n");
@@ -190,9 +197,7 @@ function main() {
                 fs.appendFileSync(path.join(Wrong, `TestCase-${testCaseNumber}.txt`), proctxt + "\n");
                 fs.appendFileSync(path.join(Wrong, `TestCase-${testCaseNumber}.txt`), "\n\nExpected Output:\n");
                 fs.appendFileSync(path.join(Wrong, `TestCase-${testCaseNumber}.txt`), cotxt);
-                fs.appendFileSync(path.join(Wrong, `TestCase-${testCaseNumber}.txt`), "\n\nExplanation Link(Hold Ctrl and Click)\n");
                 let content = fs.readFileSync(path.join(Wrong, `TestCase-${testCaseNumber}.txt`), "utf8");
-                fs.appendFileSync(path.join(Wrong, `TestCase-${testCaseNumber}.txt`), `https://github.com/nothuman2718/DSALab/blob/main/Test%20Cases/Cycle1_PartB/Q${qn[1]}.md/#test-case-${testCaseNumber}`);
                 fs.appendFileSync(ScriptReport, content);
             }
         }
