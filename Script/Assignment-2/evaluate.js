@@ -48,11 +48,11 @@ function main() {
     fs.writeFileSync(ScriptReport, "");
     //After every run it will delete the previous files and create new files.
     if (fs.existsSync(Wrong)) {
-        fs.rmSync(Wrong, { recursive: true });
+        fs.rmdirSync(Wrong, { recursive: true });
     }
     fs.mkdirSync(Wrong);
     if (fs.existsSync(Correct)) {
-        fs.rmSync(Correct, { recursive: true });
+        fs.rmdirSync(Correct, { recursive: true });
     }
     fs.mkdirSync(Correct);
 
