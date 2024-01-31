@@ -1,0 +1,10 @@
+Input:
+-1
+
+
+Your Output:
+invalid size of the array
+
+
+Expected Output:
+invalid size of the array

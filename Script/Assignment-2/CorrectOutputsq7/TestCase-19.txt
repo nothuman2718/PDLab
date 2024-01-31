@@ -1,0 +1,11 @@
+Input:
+5
+100001 1 2 3 4
+
+
+Your Output:
+invalid elements in the array
+
+
+Expected Output:
+invalid elements in the array

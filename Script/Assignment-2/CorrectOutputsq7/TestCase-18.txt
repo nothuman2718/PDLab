@@ -1,0 +1,11 @@
+Input:
+10
+0 8 7 6 5 4 3 2 1 10
+
+
+Your Output:
+invalid elements in the array
+
+
+Expected Output:
+invalid elements in the array

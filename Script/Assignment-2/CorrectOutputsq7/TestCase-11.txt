@@ -1,0 +1,11 @@
+Input:
+1
+12345
+
+
+Your Output:
+12345
+
+
+Expected Output:
+12345

@@ -1,0 +1,11 @@
+Input:
+5
+100000 4 3 2 1
+
+
+Your Output:
+1 2 3 4 100000
+
+
+Expected Output:
+1 2 3 4 100000
